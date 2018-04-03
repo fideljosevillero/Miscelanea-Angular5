@@ -13,6 +13,9 @@ import { AppComponent } from './app.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
 import { Page404Component } from './page404/page404.component';
+import { AlmacenComponent } from './almacen/almacen.component';
+import { AutoComponent } from './auto/auto.component';
+import { ContactoClienteComponent } from './contacto-cliente/contacto-cliente.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { Page404Component } from './page404/page404.component';
     AppComponent,
     PadreComponent,
     HijoComponent,
-    Page404Component
+    Page404Component,
+    AlmacenComponent,
+    AutoComponent,
+    ContactoClienteComponent
   ],
   imports: [
     BrowserModule,
