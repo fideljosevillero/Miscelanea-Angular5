@@ -14,9 +14,7 @@ export class PadreComponent implements OnInit {
 	textoInput: String;
 	clienteRecibido; // sin tipo de datos
 
-  constructor(){
-  	this.parametro1 = "parametro enviado desde padre!!!"; 
-   }
+  constructor(){}
 
   ngOnInit() {
   }
