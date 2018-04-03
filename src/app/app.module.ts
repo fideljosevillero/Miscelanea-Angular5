@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// rutas
+import { routing, appRoutingProviders } from './app.routing';
 
-//*** Prmite utilizar el '[(ngModel)]' sin problemas
+//*** Permite utilizar el '[(ngModel)]' sin problemas (Fixed)
 import { FormsModule }   from '@angular/forms';
+
+import { HttpModule }   from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -18,9 +22,11 @@ import { HijoComponent } from './hijo/hijo.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [ appRoutingProviders ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
