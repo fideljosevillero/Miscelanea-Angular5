@@ -8,10 +8,22 @@ Parámetro 1
 Parámetro 2
 <input type="text" [(ngModel)]="textoInput"  />
 
-<br/>
+<hr/>
 
 <p>
 	<!-- <app-hijo [parametroRecibido] = "'texto cualquiera'"></app-hijo> -->
 	<!-- <app-hijo [parametroRecibido] = "parametro1"></app-hijo> -->
-	<app-hijo [change_name] = "parametro1" [parametroRecibido_2] = "textoInput"></app-hijo>
+	<app-hijo 	[change_name] = "parametro1" 
+				[parametroRecibido_2] = "textoInput"
+				(pasarDatosAlPadre) = "verDatosDesdeHijo($event)" 
+				></app-hijo>
+				<!-- $event contiene el json enviado desde el metodo 'pasarDatosAlPadre' -->
 </p>
+<br/>
+<div *ngIf="clienteRecibido" >
+	<ul>
+		<li>{{clienteRecibido.nombres}}</li>
+		<li>{{clienteRecibido.email}}</li>
+		<li>{{clienteRecibido.telefono}}</li>
+	</ul>
+</div>
