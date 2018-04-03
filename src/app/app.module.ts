@@ -12,13 +12,15 @@ import { HttpModule }   from '@angular/http';
 import { AppComponent } from './app.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
+import { Page404Component } from './page404/page404.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PadreComponent,
-    HijoComponent
+    HijoComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
