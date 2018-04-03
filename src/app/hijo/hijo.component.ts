@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HijoComponent implements OnInit {
 
-  @Input() parametroRecibido: String;
+  @Input('change_name') parametroRecibido: String;
   @Input() parametroRecibido_2: String;
 
   constructor() { 
