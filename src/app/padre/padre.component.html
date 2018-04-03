@@ -10,9 +10,8 @@ Parámetro 2
 
 <hr/>
 
-<p>
-	<!-- <app-hijo [parametroRecibido] = "'texto cualquiera'"></app-hijo> -->
-	<!-- <app-hijo [parametroRecibido] = "parametro1"></app-hijo> -->
+<!-- valida la variable y genera un flag para disparar el evento 'ngOnDestroy' del componente hijo -->
+<p *ngIf="parametro1"> 
 	<app-hijo 	[change_name] = "parametro1" 
 				[parametroRecibido_2] = "textoInput"
 				(pasarDatosAlPadre) = "verDatosDesdeHijo($event)" 

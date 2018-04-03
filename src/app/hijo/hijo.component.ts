@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, DoCheck } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, DoCheck, OnDestroy } from '@angular/core';
 
 // Models
 import { Cliente } from '../Models/Cliente.component';
@@ -8,7 +8,7 @@ import { Cliente } from '../Models/Cliente.component';
   templateUrl: './hijo.component.html',
   styleUrls: ['./hijo.component.css']
 })
-export class HijoComponent implements OnInit, OnChanges, DoCheck {
+export class HijoComponent implements OnInit, OnChanges, DoCheck, OnDestroy {
 
   @Input('change_name') parametroRecibido: String;
   @Input() parametroRecibido_2: String;
@@ -36,6 +36,14 @@ export class HijoComponent implements OnInit, OnChanges, DoCheck {
   ngDoCheck(){
     console.log("lanzando el ngDoCheck");
   }
+
+  // Hook 4 (Antes de destruir el componente)
+  ngOnDestroy(){
+    // limpiar variables o lo que desees hacer antes que el componente sea destruido
+    console.log("componente 'hijo' se va a destruir");
+  }
+
+
   enviarDator(){
   	this.pasarDatosAlPadre.emit({
   		'nombres': this.cliente.nombres,
