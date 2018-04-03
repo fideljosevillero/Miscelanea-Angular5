@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, DoCheck } from '@angular/core';
 
 // Models
 import { Cliente } from '../Models/Cliente.component';
@@ -8,7 +8,7 @@ import { Cliente } from '../Models/Cliente.component';
   templateUrl: './hijo.component.html',
   styleUrls: ['./hijo.component.css']
 })
-export class HijoComponent implements OnInit, OnChanges {
+export class HijoComponent implements OnInit, OnChanges, DoCheck {
 
   @Input('change_name') parametroRecibido: String;
   @Input() parametroRecibido_2: String;
@@ -21,13 +21,21 @@ export class HijoComponent implements OnInit, OnChanges {
   	this.cliente = new Cliente("fidel", "miemail@mail.com", "3000867765556");
   }
 
-  ngOnInit() {
-  }
-
+  // Hook 1
   ngOnChanges(changes: SimpleChanges){
-    console.log(changes);
+    //console.log(changes);
+    console.log("lanzando el ngOnChanges");
   }
 
+  // Hook 2 (después del ngOnChanges)
+  ngOnInit() {
+    console.log("lanzando el ngOnInit");
+  }
+
+  // Hook 3 (después del ngOnInit), se ejecuta cada que se ejecuta un evento.
+  ngDoCheck(){
+    console.log("lanzando el ngDoCheck");
+  }
   enviarDator(){
   	this.pasarDatosAlPadre.emit({
   		'nombres': this.cliente.nombres,
