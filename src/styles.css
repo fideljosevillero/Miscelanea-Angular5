@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+.jumbotron{
+	margin-top: 10px;
+	border-radius: 8px;
+	box-shadow: 1px 2px 4px #ccc;
+}

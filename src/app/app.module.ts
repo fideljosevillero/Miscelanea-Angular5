@@ -16,6 +16,7 @@ import { Page404Component } from './page404/page404.component';
 import { AlmacenComponent } from './almacen/almacen.component';
 import { AutoComponent } from './auto/auto.component';
 import { ContactoClienteComponent } from './contacto-cliente/contacto-cliente.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ContactoClienteComponent } from './contacto-cliente/contacto-cliente.co
     Page404Component,
     AlmacenComponent,
     AutoComponent,
-    ContactoClienteComponent
+    ContactoClienteComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
