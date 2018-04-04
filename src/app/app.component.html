@@ -1,19 +1,44 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Miscelanea Angular 5
-  </h1>
+<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/']"><img src="assets/images/duke.png" width="17px;" /></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/']">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['padre']">padre</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['hijo']">hijo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['almacen']">almacen</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['auto']">auto</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['contacto']">contacto</a>
+      </li>
+      <li>
+        <a class="nav-link" style="cursor:auto;">{{contactoEmail}}</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li> -->
+    </ul>
+  </div>
+</nav>
 </div>
-<hr>
-<a [routerLink]="['/']" >home</a>
-<a [routerLink]="['padre']" >Padre</a>
-<a [routerLink]="['hijo']" >Hijo</a>
-<a [routerLink]="['almacen']" >almacen</a>
-<a [routerLink]="['auto']" >auto</a>
-<a [routerLink]="['contacto']" >contacto</a>
-<br/>
+<span>Email de contacto: <span>
+
 <router-outlet></router-outlet>
-<div *ngIf="contactoEmail"><b>Email de contacto: </b>{{contactoEmail}}<div>
+
+<!-- <div *ngIf="contactoEmail"><b>Email de contacto: </b>{{contactoEmail}}<div> -->
 <!-- cargar el componente adecuado partiendo de la ruta (request) -->
 
 <hr/>

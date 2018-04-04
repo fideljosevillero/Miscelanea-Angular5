@@ -1,6 +1,55 @@
 <p>
   contacto-cliente works!
 </p>
-Email de contacto: <input type="text" [(ngModel)]="email_contacto" />
-<button (click)="guardarEmailContacto()">Guardar email</button>
+<div class="col-sm-5">
+	<input type="email" 
+		[(ngModel)]="email_contacto"
+		class="form-control form-control-success" id="inputHorizontalSuccess" placeholder="name@example.com">
+	<button type="button" (click)="guardarEmailContacto()" class="btn btn-success" 
+				style="margin-top: 11px;">Guardar email</button>
+</div>
+
 <br/>
+<hr/>
+<br/><br/>
+
+<form class="needs-validation" novalidate>
+  <div class="form-row">
+    
+    <div class="col-md-4 mb-3">
+      <label for="validationCustomUsername">Username</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+        </div>
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
