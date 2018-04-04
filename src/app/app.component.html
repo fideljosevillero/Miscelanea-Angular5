@@ -4,8 +4,17 @@
     Miscelanea Angular 5
   </h1>
 </div>
-<!-- <app-padre></app-padre> -->
-<!-- cargagr el componente adecuado partiendo de la ruta (request) -->
+<hr>
+<a [routerLink]="['/']" >home</a>
+<a [routerLink]="['padre']" >Padre</a>
+<a [routerLink]="['hijo']" >Hijo</a>
+<a [routerLink]="['almacen']" >almacen</a>
+<a [routerLink]="['auto']" >auto</a>
+<a [routerLink]="['contacto']" >contacto</a>
+<br/>
 <router-outlet></router-outlet>
+<div *ngIf="contactoEmail"><b>Email de contacto: </b>{{contactoEmail}}<div>
+<!-- cargar el componente adecuado partiendo de la ruta (request) -->
+
 <hr/>
 

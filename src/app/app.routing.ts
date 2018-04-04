@@ -5,11 +5,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
 import { Page404Component } from './page404/page404.component';
+import { AlmacenComponent } from './almacen/almacen.component';
+import { AutoComponent } from './auto/auto.component';
+import { ContactoClienteComponent } from './contacto-cliente/contacto-cliente.component';
 
 const rutas: Routes = [
 	{path: "padre", component: PadreComponent},
 	{path: "hijo", component: HijoComponent},
 	{path: "", redirectTo: "padre", pathMatch: "full"},
+	{path: "almacen", component : AlmacenComponent},
+	{path: "auto", component : AutoComponent},
+	{path: "contacto", component : ContactoClienteComponent},
 	{path: "**", component: Page404Component}
 ];
 
