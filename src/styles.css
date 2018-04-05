@@ -7,3 +7,38 @@
 	/*background: blue;*/
 	border-bottom: 3px solid orange;
 }
+
+.navbar>div>ul>li>a:hover{
+	/*background: blue;*/
+	transition:all 300ms;
+	border-bottom: 1px solid #AAA2A1;
+}
+
+.animacion-custome{
+	animation-name: deslizando;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes deslizando{
+	0%{
+		height: 20px;
+		background-color: red;
+	}
+	50%{
+		height: 800px;
+		background-color: blue;
+	}
+	100%{
+		height: 800px;
+		background-color: #e9ecef;
+	}
+	/*from{
+		height: 20px;
+		background-color: red;
+	}
+	to{
+		height: 800px;
+		background-color: #e9ecef;
+	}*/
+}
