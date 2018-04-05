@@ -11,14 +11,26 @@ import { ContactoClienteComponent } from './contacto-cliente/contacto-cliente.co
 import { HomeComponent } from './home/home.component';
 
 const rutas: Routes = [
-	{path: "inicio", component: HomeComponent},
+	// Ojo al componente principal(en este caso Home) se le debe colocar '<router-outlet></router-outlet>'
+	// para que redireccione corractamente a la pagina hija.
+	{path: "principal", component: HomeComponent, 
+		children: [
+			{path: "padre", component: PadreComponent},
+			{path: "hijo", component: HijoComponent},
+			{path: "almacen", component : AlmacenComponent},
+			{path: "auto", component : AutoComponent},
+			{path: "contacto", component : ContactoClienteComponent}
+		]
+	}
+
+	/*{path: "inicio", component: HomeComponent},
 	{path: "padre", component: PadreComponent},
 	{path: "hijo", component: HijoComponent},
 	{path: "", redirectTo: "inicio", pathMatch: "full"},
 	{path: "almacen", component : AlmacenComponent},
 	{path: "auto", component : AutoComponent},
 	{path: "contacto", component : ContactoClienteComponent},
-	{path: "**", component: Page404Component}
+	{path: "**", component: Page404Component}*/
 ];
 
 export const appRoutingProviders: any[]= [];
