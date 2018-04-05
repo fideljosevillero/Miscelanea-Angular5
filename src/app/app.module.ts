@@ -17,6 +17,7 @@ import { AlmacenComponent } from './almacen/almacen.component';
 import { AutoComponent } from './auto/auto.component';
 import { ContactoClienteComponent } from './contacto-cliente/contacto-cliente.component';
 import { HomeComponent } from './home/home.component';
+import { SimpleTinyComponent } from './simple-tiny/simple-tiny.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { HomeComponent } from './home/home.component';
     AlmacenComponent,
     AutoComponent,
     ContactoClienteComponent,
-    HomeComponent
+    HomeComponent,
+    SimpleTinyComponent
   ],
   imports: [
     BrowserModule,

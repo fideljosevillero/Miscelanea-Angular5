@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 //let $ = require('assets/js/jquery.min.js');
-declare var require: any
+declare var require: any;
 let $ = require('assets/js/jquery.min.js');
+// integracion con Tinymce sin terminar, documentacion en
+// https://www.tinymce.com/docs/integrations/angular2/
 
 @Component({
   selector: 'app-home',
