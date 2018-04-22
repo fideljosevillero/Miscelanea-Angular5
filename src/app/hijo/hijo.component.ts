@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, DoCheck, OnDestroy } from '@angular/core';
 
 // Models
-import { Cliente } from '../Models/Cliente.component';
+import { Cliente } from '../Models/Cliente';
 
 @Component({
   selector: 'app-hijo',

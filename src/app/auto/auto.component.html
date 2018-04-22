@@ -1,20 +1,23 @@
 <p>
   auto works!
 </p>
-<form>
+<form #formAuto="ngForm" (ngSubmit)="submitAuto()">
 	<div class="col-lg-6">
 		<p>
 			<label>Marca</label>
-			<input type="text" class="form-control" />
+			<input type="text" class="form-control" [ngModelOptions]="{standalone:
+   true}" [(ngModel)]="auto.marca" />
 		</p>
 		<p>
 			<label>Modelo</label>
-			<input type="text" class="form-control" />
+			<input type="text" class="form-control" [ngModelOptions]="{standalone:
+   true}" [(ngModel)]="auto.modelo" />
 		</p>
 		<p>
 			<label>Cilindraje</label>
-			<input type="text" class="form-control" />
+			<input type="text" class="form-control" [ngModelOptions]="{standalone:
+   true}" [(ngModel)]="auto.cilindraje" />
 		</p>
-		<input type="button" value="Crear auto" class="btn btn-success" />
+		<input type="submit" value="Crear auto" class="btn btn-success" />
 	</div>
 </form>
