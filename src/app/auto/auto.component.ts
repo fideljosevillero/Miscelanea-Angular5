@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Auto } from '../Models/Auto';
 import { AutoService } from '../service/auto.service';
 import { GLOBAL } from '../service/global';
+import { Agencia } from '../Models/Agencia';
+
 
 @Component({
   selector: 'app-auto',
@@ -12,6 +14,7 @@ import { GLOBAL } from '../service/global';
 export class AutoComponent implements OnInit {
 
   private auto: Auto;
+  private agencias:Agencia[];
 
   constructor(
   	private _autoService: AutoService
@@ -19,9 +22,7 @@ export class AutoComponent implements OnInit {
   	this.auto = new Auto("", "", "");
   }
 
-  ngOnInit() {
-  	
-  }
+  ngOnInit(){}
 
   submitAuto(){
   	console.log("Se lanza el metodo submitAuto ");
@@ -29,9 +30,13 @@ export class AutoComponent implements OnInit {
   	this._autoService.createAuto().subscribe(
   		response => {
   			//if(response.auto && response.auto.marca){
-  				//this.auto = response.auto;
+  				//this.auto = response.auto; 
   				console.log("respuesta:");
-  				console.log(response);
+  				//console.log(response.Consultar_AgenciasResult[0]);
+          console.log(response);
+          this.agencias = response.Consultar_AgenciasResult;
+          console.log("lista del array");
+          console.log(this.agencias);
   			//}
   		},
   		error => {
@@ -44,19 +49,16 @@ export class AutoComponent implements OnInit {
   }
 
   metodoDos(){
-    /*this._autoService.fffffffffffffff().subscribe(
+    this._autoService.prueba2().subscribe(
       response => {
-        //if(response.auto && response.auto.marca){
-          //this.auto = response.auto;
-          console.log("respuesta:");
-          console.log(response);
-        //}
+        console.log("respuesta:");
+        console.log(response);
       },
       error => {
         console.log("ERROR LANZADO!");
         console.log(<any>error);
       }
-    );*/
+    );
   }
 
 }

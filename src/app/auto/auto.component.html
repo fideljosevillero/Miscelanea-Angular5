@@ -23,3 +23,8 @@
 </form>
 <hr>
 <input type="button" value="boton 2 de prueba" class="btn btn-success" (click)="metodoDos()" />
+
+select
+<select [(ngModel)]="selectedValue">
+  <option *ngFor="let a of agencias" [ngValue]="a.agencia_id">{{a.nombre}} - {{a.ciudad}}</option>
+</select>

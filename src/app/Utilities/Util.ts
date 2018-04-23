@@ -1,6 +1,6 @@
 export class Util{
 
-	getHeaders(){
+	/*getHeaders(){
 		let headers = new Headers();
 		headers.append('Content-Type','application/json');
 	    headers.append('Accept', 'application/json');
@@ -11,5 +11,5 @@ export class Util{
 	    headers.append('Access-Control-Allow-Credentials', 'true');
 	    headers.append('Access-Control-Max-Age', '1');
 	    return headers;
-	}
+	}*/
 }
