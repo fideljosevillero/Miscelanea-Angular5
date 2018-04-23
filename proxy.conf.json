@@ -1,6 +1,6 @@
 {
-	"/posts/*":{
-		"target": "https://jsonplaceholder.typicode.com",
+	"/cboneplus/*":{
+		"target": "http://stg2.controlbox.net",
 		"secure": false,
 		"changeIrigin": true
 	}

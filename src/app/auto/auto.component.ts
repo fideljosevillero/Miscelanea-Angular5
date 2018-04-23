@@ -43,4 +43,20 @@ export class AutoComponent implements OnInit {
   	console.log(this.auto);
   }
 
+  metodoDos(){
+    /*this._autoService.fffffffffffffff().subscribe(
+      response => {
+        //if(response.auto && response.auto.marca){
+          //this.auto = response.auto;
+          console.log("respuesta:");
+          console.log(response);
+        //}
+      },
+      error => {
+        console.log("ERROR LANZADO!");
+        console.log(<any>error);
+      }
+    );*/
+  }
+
 }
