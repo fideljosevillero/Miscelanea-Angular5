@@ -20,20 +20,26 @@ export class AutoComponent implements OnInit {
   }
 
   ngOnInit() {
-  	console.log("---------------");
+  	
   }
 
   submitAuto(){
-  	this._autoService.createAuto(this.auto).subscribe(
+  	console.log("Se lanza el metodo submitAuto ");
+  	//this._autoService.createAuto(this.auto).subscribe(
+  	this._autoService.createAuto().subscribe(
   		response => {
-  			if(response.auto && response.auto.marca){
-  				this.auto = response.auto;
-  			}
+  			//if(response.auto && response.auto.marca){
+  				//this.auto = response.auto;
+  				console.log("respuesta:");
+  				console.log(response);
+  			//}
   		},
   		error => {
-  			console.log(<any>error)
+  			console.log("ERROR LANZADO!");
+  			console.log(<any>error);
   		}
   	);
+  	console.log("Finaliza el metodo submitAuto ");
   	console.log(this.auto);
   }
 
