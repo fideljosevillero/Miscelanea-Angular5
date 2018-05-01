@@ -9,6 +9,8 @@ import { AlmacenComponent } from './almacen/almacen.component';
 import { AutoComponent } from './auto/auto.component';
 import { ContactoClienteComponent } from './contacto-cliente/contacto-cliente.component';
 import { HomeComponent } from './home/home.component';
+import { WizardComponent } from './wizard/wizard.component';
+import { DatatableComponent } from './datatable/datatable.component';
 
 const rutas: Routes = [
 	// Ojo al componente principal(en este caso Home) se le debe colocar '<router-outlet></router-outlet>'
@@ -24,6 +26,8 @@ const rutas: Routes = [
 	}*/
 
 	{path: "inicio", component: HomeComponent},
+	{path: "wizard", component: WizardComponent},
+	{path: "datatable", component: DatatableComponent},
 	{path: "padre", component: PadreComponent},
 	{path: "hijo", component: HijoComponent},
 	{path: "", redirectTo: "inicio", pathMatch: "full"},

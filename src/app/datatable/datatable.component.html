@@ -1,0 +1,21 @@
+<div class="col-lg-8">
+  <table class="table">
+    <caption>List of users</caption>
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Email</th>
+        <th scope="col">Teléfono</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of listPersonas; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{p.nombres}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.telefono}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

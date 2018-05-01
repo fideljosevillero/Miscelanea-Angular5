@@ -1,0 +1,23 @@
+<h1>
+  Ingresar
+</h1>
+<hr>
+<div class="col-lg-4">
+	<p *ngIf="mensaje" class="alert alert-danger">{{mensaje}}</p>
+	
+	<form #loginForm="ngForm" (ngSubmit)="sendCredencials()">
+		<p>
+			<label>Usuario</label>
+			<input type="text" 
+				[ngModelOptions]="{standalone:true}"
+				[(ngModel)]="login.Usuario" class="form-control" />
+		</p>
+		<p>
+			<label>Contraseña</label>
+			<input type="password" 
+				[ngModelOptions]="{standalone:true}"
+				[(ngModel)]="Contrasena" class="form-control" />
+		</p>
+		<input type="submit" value={{buttonNane}} class="btn btn-success" />
+	</form>
+</div>

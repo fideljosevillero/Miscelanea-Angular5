@@ -18,6 +18,8 @@ import { AutoComponent } from './auto/auto.component';
 import { ContactoClienteComponent } from './contacto-cliente/contacto-cliente.component';
 import { HomeComponent } from './home/home.component';
 import { SimpleTinyComponent } from './simple-tiny/simple-tiny.component';
+import { WizardComponent } from './wizard/wizard.component';
+import { DatatableComponent } from './datatable/datatable.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { SimpleTinyComponent } from './simple-tiny/simple-tiny.component';
     AutoComponent,
     ContactoClienteComponent,
     HomeComponent,
-    SimpleTinyComponent
+    SimpleTinyComponent,
+    WizardComponent,
+    DatatableComponent
   ],
   imports: [
     BrowserModule,
