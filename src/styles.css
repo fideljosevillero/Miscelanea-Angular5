@@ -94,3 +94,22 @@
 .text-requerido{
 	color: red;
 }
+
+/* footer */
+footer{
+	background-color: #3e4551;
+	color: white;
+}
+
+.footer-down{
+	background-color: #5882FA; /* #212529; */
+	/*color: white;*/
+}
+
+footer a{
+	color: white;
+}
+
+.borde-footer{
+	border-color: #81BEF7 /*#5882FA;*/
+}
