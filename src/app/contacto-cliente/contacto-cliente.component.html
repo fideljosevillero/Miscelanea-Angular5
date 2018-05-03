@@ -2,9 +2,18 @@
   contacto-cliente works!
 </p>
 <div class="col-sm-5">
-	<input type="email" 
+	<input type="email"
+    required
+    pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
 		[(ngModel)]="email_contacto"
-		class="form-control form-control-success" id="inputHorizontalSuccess" placeholder="name@example.com">
+    #email="ngModel" name="email"
+		class="form-control form-control-success" id="inputHorizontalSuccess" 
+    placeholder="name@example.com">
+      <span *ngIf="email.touched && !email.valid">
+        <h6><small class="text-requerido">{{requeridoMessage}}</small></h6>
+      </span>
+    <hr>
+
 	<button type="button" (click)="guardarEmailContacto()" class="btn btn-success" 
 				style="margin-top: 11px;">Guardar email</button>
 </div>

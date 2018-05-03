@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MESSAGES } from '../Utilities/MESSAGES';
 
 @Component({
   selector: 'app-contacto-cliente',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoClienteComponent implements OnInit {
 
+  requeridoMessage: string;
   email_contacto: string;
 
-  constructor() { }
+  constructor() {
+    this.requeridoMessage = MESSAGES.requerido;
+  }
 
   ngOnInit() {
   }
