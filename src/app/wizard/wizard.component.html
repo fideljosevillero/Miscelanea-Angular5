@@ -3,13 +3,33 @@
         <div class="col-md-6">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {{estadoTab1}}" (click)="estado1()" data-toggle="tab" >Current Preferences</a>
+                    <a class="nav-link {{estadoTab1}}" (click)="estado1()" data-toggle="tab" >
+                      Current Preferences
+                      <span class="badge badge-pill badge-success">4</span>
+                      <!-- 
+                        badge badge-light
+                        badge badge-pill badge-primary
+                        badge badge-pill badge-secondary
+                        badge badge-pill badge-success
+                        badge badge-pill badge-danger
+                        badge badge-pill badge-warning
+                        badge badge-pill badge-info
+                        badge badge-pill badge-light
+                        badge badge-pill badge-dark
+                      -->
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{estadoTab2}}" data-toggle="tab"  (click)="estado2()"> Alternative </a>
+                    <a class="nav-link {{estadoTab2}}" data-toggle="tab"  (click)="estado2()">
+                      Alternative 
+                      <span class="badge badge-pill badge-warning">6</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{estadoTab3}}" data-toggle="tab" (click)="estado3()">Link</a>
+                    <a class="nav-link {{estadoTab3}}" data-toggle="tab" (click)="estado3()">
+                      Link
+                      <span class="badge badge-pill badge-primary">100</span>
+                    </a>
                 </li>
             </ul>
             <div class="tab-content">
@@ -48,7 +68,6 @@
                     </ul>
                 </div>
                  <div role="tabpanel" class="tab-pane {{estadoTab3}} " id="link">
-                    nkjnkjnkjnkjnkj
                     <ul class="list-group media-list media-list-stream">
                         Link
                     </ul>
@@ -62,21 +81,21 @@
 
 <!-- -------------------------------------------------------------------------------- -->
 
-  <title>Bootstrap Example</title>
+  <!-- <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
 
 <!-- Button to Open the Modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#MyModal">
   Open modal
 </button>
 
 <!-- The Modal -->
-<div class="modal fade" id="myModal">
+<div class="modal fade" id="MyModal">
   <div class="modal-dialog">
     <div class="modal-content">
 
@@ -99,3 +118,12 @@
     </div>
   </div>
 </div>
+
+<!--modal-->
+<script>
+  $(document).ready(function() {
+  	$("#MyModal").modal();
+  	alert("algo!");
+  });
+  //})
+</script>
