@@ -15,11 +15,13 @@ export class LoginComponent implements OnInit, DoCheck {
   private mensaje: string;
   private Contrasena:string;
 
+
   constructor(
   	private _LoginService: LoginService
   	) { 
   	this.buttonNane = "Enviar";
   	this.login = new Login("", "");
+
   }
 
   ngOnInit() {
