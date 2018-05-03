@@ -113,3 +113,7 @@ footer a{
 .borde-footer{
 	border-color: #81BEF7 /*#5882FA;*/
 }
+
+.without_style:hover{
+	color: white;
+}
