@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { Login } from '../Models/login';
 import { LoginService } from '../service/login.service';
 
@@ -8,7 +8,7 @@ import { LoginService } from '../service/login.service';
   styleUrls: ['./login.component.css'],
   providers: [LoginService]
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, DoCheck {
 
   private buttonNane: string;
   private login: Login;
@@ -23,6 +23,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngDoCheck(){
+    console.log("algo cambio!!!");
   }
 
   sendCredencials(){

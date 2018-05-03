@@ -20,6 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { SimpleTinyComponent } from './simple-tiny/simple-tiny.component';
 import { WizardComponent } from './wizard/wizard.component';
 import { DatatableComponent } from './datatable/datatable.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { DatatableComponent } from './datatable/datatable.component';
     HomeComponent,
     SimpleTinyComponent,
     WizardComponent,
-    DatatableComponent
+    DatatableComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
