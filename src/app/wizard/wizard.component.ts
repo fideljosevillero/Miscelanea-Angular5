@@ -11,7 +11,7 @@ export class WizardComponent implements OnInit {
   private estadoTab1:string;
   private estadoTab2:string;
   private estadoTab3:string;
-  private listPersonas:ArrayList<Cliente> = [];
+  private listPersonas:Array<Cliente> = [];
 
 	private activeDetails:string;
 	private activeCaptain:string;
